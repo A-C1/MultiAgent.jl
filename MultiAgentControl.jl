@@ -21,7 +21,7 @@ function Model1{T}(t0, tf, dt) where T
 	current_iter = 1
 	time = t0
 	N = length(t0:dt:tf)
-	return Model1{T}(t0, tf, time, current_iter, dt, N, Agent[], Agent[])
+	return Model1{T}(t0, tf, time, current_iter, dt, N, T[], T[])
 end
 
 Model = Model1
