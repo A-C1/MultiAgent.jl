@@ -1,4 +1,4 @@
-using Plots
+using GLMakie
 using LinearAlgebra
 
 # Agent is the supertype for leader and follower both
