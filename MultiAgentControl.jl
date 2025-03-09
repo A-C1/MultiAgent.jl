@@ -235,11 +235,12 @@ for i = 1:m.N-1
 end
 
 
-fig1 = plot(aspect_ratio=1, legend= nothing)
+fig = Figure()
+ax = Axis(fig[1,1])
 for l in m.leaders
-	plot!(fig1, l.state_hist[1, :], l.state_hist[2, :])
+	lines!(ax, l.state_hist[1, :], l.state_hist[2, :])
 end
 for f in m.followers
-	plot!(fig1, f.state_hist[1, :], f.state_hist[2, :])
+	plot!(ax, f.state_hist[1, :], f.state_hist[2, :])
 end
-display(fig1)
+display(fig)
